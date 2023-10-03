@@ -90,7 +90,7 @@ services:
     container_name: be-dataapp-provider
     ports:
       - "8083:8083"
-      - "9000:9000"
+      - "9009:9000"
     environment:
       - "SPRING_PROFILES_ACTIVE=docker"
       - DATA_APP_MULTIPART=${PROVIDER_MULTIPART_EDGE}
@@ -286,7 +286,7 @@ services:
         container_name: clarus-proxy
         hostname: clarus-proxy
         ports:
-            - 5000:5000
+            - 5004:5000
         networks: 
           - clarus_network
                  
