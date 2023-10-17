@@ -256,8 +256,8 @@ services:
 
   clarus-inference:
 
-        image: clarusproject/clarus_inference:0.0.1
-        #build: ../code/clarus_edge_inference
+        #image: clarusproject/clarus_inference:0.0.1
+        build: ./code/clarus_edge_inference
         container_name: clarus-inference
         hostname: clarus-inference
         ports:

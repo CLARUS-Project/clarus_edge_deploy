@@ -1,0 +1,1 @@
+docker build -t "clarusproject/clarus_inference:0.0.1" --push .
