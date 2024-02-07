@@ -56,7 +56,7 @@ services:
       resources:
         limits:
           cpus: "1"
-          memory: 256M
+          memory: 512M
     logging:
       options:
         max-size: "100M"
@@ -64,7 +64,7 @@ services:
       - clarus_network
     container_name: uc-dataapp-provider
     environment:
-      - "JDK_JAVA_OPTIONS=-Xmx256m"
+      - "JDK_JAVA_OPTIONS=-Xmx512m"
       - ECC_PORT=8449
       - ECC_SELF_DESCRIPTION_URL=${PROVIDER_ECC_SELF_DESCRIPTION_URL}
       - KEYSTORE_NAME=${KEYSTORE_NAME}

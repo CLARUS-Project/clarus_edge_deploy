@@ -123,6 +123,11 @@ Move to the folder where the repo has been cloned. Edit .env file and update nex
     ```
     docker login -username=clarusproject
     ```
+- Create a volume for the data app component the first time the edge services are deployed.
+    ```
+    ./prepopulate_be_dataapp_data_provider.sh
+    ```
+
 
 - Execute docker-compose file
     ```
