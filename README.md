@@ -60,7 +60,7 @@ If you are using Clarus Dataspace DAPS. You need to create a certificate for the
     application.dapsJWKSUrl=https://daps.mvds-clarus.eu/auth/jwks.json 
     ```
 
-### -> Create certificate for MLOps TrueConnector
+### -> Create certificate for data exchange with other TrueConnector
 The TRueConnector deployed at the edge uses TLS certificates to provide or consume data to/from  TRueConnector deployed by the MLOPs cloud platform. It is needed to create a TLS certificate for TrueConnector and import in the truststore the public key of the TRueConnector at MLOps cloud platform. Move to the ecc_folder and recreate certificates. The following steps and examples describe the sequence of operations.  The names in italics and bold are only as examples.
 
 1.	Create public/private key in keystore
