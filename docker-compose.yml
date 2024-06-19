@@ -277,6 +277,14 @@ services:
         networks: 
             - clarus_network
 
+  clarus-update-model:
+        #image: clarusproject/clarus_edge_update_model:0.0.1
+        build: ./code/clarus_edge_model_update
+        container_name: clarus-update-model
+        hostname: clarus-update-model
+        networks: 
+            - clarus_network
+
   clarus-hmi:
 
         image: clarusproject/clarus_hmi:0.0.1
