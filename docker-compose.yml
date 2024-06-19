@@ -273,7 +273,7 @@ services:
         ports:
             - 5000:5000
         volumes:
-            - ./code/clarus_edge_drift_detection/app/clarus_reports:/app/app/clarus_reports
+            - ./code/clarus_edge_drift_detector/app/clarus_reports:/app/app/clarus_reports
         networks: 
             - clarus_network
 
