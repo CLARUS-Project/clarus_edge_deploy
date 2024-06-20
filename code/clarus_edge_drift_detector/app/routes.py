@@ -5,6 +5,7 @@ from app.src.read_data import read_data
 from app.src.concept_drift import concept_drift, update_csv_rows   
 from flask import current_app as app 
 from flask import jsonify
+from app.trigger_dag_airflow import trigger_dag
 
 @app.route('/')
 def hello_world():
@@ -18,4 +19,9 @@ def detect_data_drift():
     df_detect = update_csv_rows(df_new)
     # Detect the concept drift
     drift_detected = concept_drift(df_ref, df_detect)
-    return jsonify({"message": f"Drift detected: {drift_detected}"})
+    # Trigger the retraining:
+    if drift_detected==True:
+        trigger_dag(retrain=True)
+        return jsonify({"message": "Drift detected and retraining triggered"})
+    else:
+        return jsonify({"message": "Drift NOT detected"})

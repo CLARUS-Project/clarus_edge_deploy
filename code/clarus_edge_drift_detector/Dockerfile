@@ -19,7 +19,7 @@ COPY . /app/
 RUN mkdir -p reports 
 
 # Expose the port the app runs on
-EXPOSE 5000
+EXPOSE 5001
 
 # Run the application
 CMD ["python", "run.py"]
