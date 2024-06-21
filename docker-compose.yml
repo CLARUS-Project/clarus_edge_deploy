@@ -265,11 +265,11 @@ services:
         networks: 
             - clarus_network
 
-  clarus-drift-detection:
+  clarus-drift-detector:
         #image: clarusproject/clarus_edge_drift_detection:0.0.1
-        build: ./code/clarus_edge_drift_detection
-        container_name: clarus-drift-detection
-        hostname: clarus-drift-detection
+        build: ./code/clarus_edge_drift_detector
+        container_name: clarus-drift-detector
+        hostname: clarus-drift-detector
         ports:
             - 5001:5000
         volumes:

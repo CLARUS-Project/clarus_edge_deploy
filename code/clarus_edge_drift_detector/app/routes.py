@@ -16,9 +16,9 @@ def detect_data_drift():
     # Get the data of reference and new data
     df_ref, df_new = read_data()
     # Update the CSV file with the new data point(s)
-    df_detect = update_csv_rows(df_new)
+    # df_detect = update_csv_rows(df_new)
     # Detect the concept drift
-    drift_detected = concept_drift(df_ref, df_detect)
+    drift_detected = concept_drift(df_ref, df_new)
     # Trigger the retraining:
     if drift_detected==True:
         trigger_dag(retrain=True)
