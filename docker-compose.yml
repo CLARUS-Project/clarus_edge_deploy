@@ -1,4 +1,3 @@
-version: '3.1'
 services:
   ecc-provider:
     image: rdlabengpa/ids_execution_core_container:v1.11.0
@@ -286,7 +285,6 @@ services:
             - clarus_network
 
   clarus-hmi:
-
         image: clarusproject/clarus_hmi:0.0.1
         #build: ../code/clarus-hmi
         container_name: clarus-hmi
@@ -298,7 +296,6 @@ services:
           
 
   clarus-proxy:
-
         image: clarusproject/clarus_proxy:0.0.1
         #build: ../code/clarus_proxy
         container_name: clarus-proxy

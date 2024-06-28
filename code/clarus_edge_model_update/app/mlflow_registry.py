@@ -2,6 +2,10 @@ import mlflow
 from mlflow.tracking import MlflowClient
 import os
 
+# Set the tracking URI to the remote server
+MLFLOW_TRACKING_URI = 'http://34.250.205.215:30005'
+mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
+
 def check_and_download_new_model(current_version, model_name, model_stage='Production', download_path='./model'):
     """
     Checks if there is a new model version in production in MLflow and downloads it if the version is newer than the current one.
